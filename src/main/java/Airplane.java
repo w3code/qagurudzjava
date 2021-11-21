@@ -8,12 +8,12 @@ public class Airplane {
     private int airplaneRange;
 
     Airplane(String airplaneModel, double airplaneLength, double airplaneWingspan, int airplaneFuelCapacity, int airplaneTakeoffWeight, int airplaneRange) {
-        setAirplaneModel(airplaneModel);
-        setAirplaneLength(airplaneLength);
-        setAirplaneWingspan(airplaneWingspan);
-        setAirplaneFuelCapacity(airplaneFuelCapacity);
-        setAirplaneTakeoffWeight(airplaneTakeoffWeight);
-        setAirplaneRange(airplaneRange);
+        this.airplaneModel = airplaneModel;
+        this.airplaneLength = airplaneLength;
+        this.airplaneWingspan = airplaneWingspan;
+        this.airplaneFuelCapacity = airplaneFuelCapacity;
+        this.airplaneTakeoffWeight = airplaneTakeoffWeight;
+        this.airplaneRange = airplaneRange;
     }
 
     public String getAirplaneModel() {
@@ -65,14 +65,14 @@ public class Airplane {
     }
 
     static class AirplaneType {
-        static String type = "Passenger";
+        private static final String type = "Passenger";
 
-        public void printType() {
+        public static void printAirplaneType() {
             System.out.println("Airplane type: " + type);
         }
     }
 
-    void printTechnicalCharacteristics() {
+    public void printTechnicalCharacteristics() {
         System.out.println(AIRPLANE_NAME + " " + getAirplaneModel() + " technical characteristics:");
         System.out.println("Airplane length: " + getAirplaneLength() + " m");
         System.out.println("Airplane wingspan: " + getAirplaneWingspan() + " m");
